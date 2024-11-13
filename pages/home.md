@@ -1,7 +1,7 @@
 ---
 layout: default
-title: GitHub pages
-description: Hello
+title: GitHub Pages
+description: A project for learning how to create and deploy GitHub pages
 giscus_comments: true
 permalink: /
 ---
