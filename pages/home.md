@@ -7,5 +7,5 @@ permalink: /
 This project is about GitHub pages. 
 Visit my [project-repo](https://github.com/gh-pages-project/project-repo) and related [docs](https://gh-pages-project.github.io/project-repo/).
 
-A page for testing comments is [here]({% link /test_comments/ %}).
+A page for testing comments is [here]({% link test_comments.md %}).
 
