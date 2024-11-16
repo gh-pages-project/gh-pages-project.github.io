@@ -196,7 +196,6 @@ The html code we need is unique for every repo. We can generate it for any or ev
     layout: default
     ---
     <h1>{{ page.title }}</h1>
-    <p class="view">by {{ page.author | default: site.author }}</p>    
     {{content}}   
     {% if page.giscus_comments %}
       {% include giscus.liquid %}
