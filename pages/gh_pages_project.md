@@ -33,7 +33,7 @@ Our website layout is very basic so far. To improve it, we need to use a theme. 
 
 - Exercise: Create a new file named _config.yml in the root folder of the repo [your organization name].github.io with the following content:
 
-```
+```yaml
 title: GitHub Pages
 description: Bookmark for updates!
 remote_theme: pages-themes/cayman
@@ -48,7 +48,7 @@ So far we have been using our README.md file for our homepage. Let us create our
 
 - Exercise: From root folder of your repo ([your organization name].github.io), create a new file with the path pages/home.md, paste the following content in it, and commit changes:
   
-  ```
+  ```liquid
   ---
   layout: default
   title: GitHub Pages
@@ -191,7 +191,7 @@ The html code we need is unique for every repo. We can generate it for any or ev
   - create a new file with the path _layouts/page.liquid
   - paste the following code and commit changes:
  
- ```liquid
+ ```html
     ---
     layout: default
     ---
