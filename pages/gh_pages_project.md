@@ -48,7 +48,7 @@ So far we have been using our README.md file for our homepage. Let us create our
 
 - Exercise: From root folder of your repo ([your organization name].github.io), create a new file with the path pages/home.md, paste the following content in it, and commit changes:
   
-  ```html
+  ```yaml
   ---
   layout: default
   title: GitHub Pages
@@ -85,7 +85,7 @@ The last step above is necessary for enabling pages for a repo, it was not neede
     ```
   - Create a file with the path *docs/home.md* and paste the following content in it after editing the web links according to the name you picked for your organization:
     
-      ```html
+      ```yaml
       ---
       layout: default
       title: Docs for the project-repo
@@ -100,7 +100,7 @@ Before we take a coffee break, let us create a link to the above page:
 - Exercise: Create a link to the project-repo docs on the homepage of the repo [your organization name].github.io:
   - Go to the repo [your organization name].github.io and add the following line at the bottom of the file pages/home.md (replace gh-pages-project with the name of your organization:
     
-    ```html
+    ```liquid
     This project is about GitHub pages, visit the [project document]({% link pages/gh_pages_project.md %}) to learn how the project 
     was implemented.
 
@@ -191,7 +191,7 @@ The html code we need is unique for every repo. We can generate it for any or ev
   - create a new file with the path _layouts/page.liquid
   - paste the following code and commit changes:
 
-{% highlight liquid %}
+```liquid
     ---
     layout: default
     ---
@@ -205,7 +205,7 @@ The html code we need is unique for every repo. We can generate it for any or ev
     {% if page.giscus_comments %}
       {% include giscus.liquid %}
     {% endif %}
- {% endhighlight %}
+```
 
 ### 2.5 Create a test page for comments
 
@@ -230,12 +230,7 @@ Let us create link for the test_comments page for easy navigation:
 
 Exercise: visit the root folder of the pages repo, edit the file pages/home.md by adding the following content at the bottom of the page:
 
-```
-A page for testing comments is [here](test_comments.md)
-```
-
-Another way to link the page is using the *link* tag:
-```
+```liquid
 A page for testing giscus comments functionality is [here]({% link pages/test_comments.md %}).
 ```
 
@@ -274,7 +269,7 @@ The following exercise will disable the default workflow and enable our custom w
   - create a new file with the path .github/workflows/build_deploy_gh_pages.yml
   - paste the following content in it and commit changes:
     
-    ```
+    ```yaml
     name: build_deploy_gh_pages
     on: 
       workflow_dispatch
@@ -337,7 +332,7 @@ We need to create a new repo that will host the reusable workflow that both of o
   - create a public repo named *workflows* under our organization (follow the usual steps to create a repo under our organization).
   - in the root folder of the *workflows* repo, create a new file with the path ./github/workflows/build_deploy_gh_pages.yml, paste the following code in it and  commit changes:
     
-    ```
+    ```yaml
     name: build_deploy_gh_pages reusable workflow
     on:
       workflow_call:
@@ -390,7 +385,7 @@ We need to create a new repo that will host the reusable workflow that both of o
   - switch to the repo [your organization name].github.io
   - open the ./github/workflows/build_deploy_gh_pages.yml file to edit and replace the content with the following code and commit changes:
     
-    ```
+    ```yaml
     name: build_deploy_gh_pages
     on:
       workflow_dispatch 
