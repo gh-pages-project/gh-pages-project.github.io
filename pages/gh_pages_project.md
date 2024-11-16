@@ -191,7 +191,6 @@ The html code we need is unique for every repo. We can generate it for any or ev
   - create a new file with the path _layouts/page.liquid
   - paste the following code and commit changes:
     
-    ```
     {% raw %}
     ---
     layout: default
@@ -208,7 +207,6 @@ The html code we need is unique for every repo. We can generate it for any or ev
       {% include giscus.liquid %}
     {% endif %}
     {% endraw %}
-    ```
 
 ### 2.5 Create a test page for comments
 
