@@ -185,6 +185,7 @@ The html code we need is unique for every repo. We can generate it for any or ev
 - Exercise: Visit the root folder of the pages repo:
   - create a new file with the path _layouts/page.liquid
   - paste the following code and commit changes:
+    
     ```
     ---
     layout: default
@@ -209,7 +210,8 @@ The html code we need is unique for every repo. We can generate it for any or ev
 
 - Exercise: Visit the root folder of pages repo:
   - create a new file with the path pages/test_comments.md
-  - paste the following content in it and make changes for author name and date fields:
+  - paste the following content in it and make changes for author name and date fields and commit changes:
+    
     ```
     ---
     layout: page
@@ -222,7 +224,6 @@ The html code we need is unique for every repo. We can generate it for any or ev
   
     This is a test page with comments enabled.
     ```
-  - commit changes
 
 Let us create link for the test_comments page for easy navigation:
 
@@ -402,11 +403,5 @@ Now let us test our new setup. Click on *Actions* tab and run the updated workfl
 We need to repeat the above steps for our repo named project-repo with the following change in the workflow code: Change the value of build_source from './' to './docs'. Also test the workflow.
 
 Great, our workflow setup is done. Happy writing :heart:.
-
-Math inline:  $$\sqrt{3x-1}+(1+x)^2$$
-
-**The Cauchy-Schwarz Inequality**
-
-$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 
 Acknowledgments: I got a lot of help from [github docs](https://docs.github.com) and [jekyll docs](https://jekyllrb.com/) for writing this document. 
