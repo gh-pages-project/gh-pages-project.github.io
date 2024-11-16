@@ -48,15 +48,15 @@ So far we have been using our README.md file for our homepage. Let us create our
 
 - Exercise: From root folder of your repo ([your organization name].github.io), create a new file with the path pages/home.md, paste the following content in it, and commit changes:
   
-  ```yaml
-  ---
-  layout: default
-  title: GitHub Pages
-  description: Create and deploy GitHub pages
-  permalink: /
-  ---
-  This project is about GitHub pages.
-  ```
+```yaml
+---
+layout: default
+title: GitHub Pages
+description: Create and deploy GitHub pages
+permalink: /
+---
+This project is about GitHub pages.
+```
 
 Wait for a minute or so as GitHub rebuilds your site, visit the site (https://[your organization name].github.io) and refresh your browser, you will see the updated content.
 
@@ -76,36 +76,36 @@ The last step above is necessary for enabling pages for a repo, it was not neede
 - Exercise: Create a page in the new repo:
   - To add a theme, create a file with the path docs/_config.yml in the root folder of the repo (named project-repo) and paste the following content in it:
     
-    ```yaml
-    title: project-repo docs
-    description: Docs for the project-repo
-    remote_theme: pages-themes/cayman
-    plugins:
-    - jekyll-remote-theme
-    ```
+```yaml
+title: project-repo docs
+description: Docs for the project-repo
+remote_theme: pages-themes/cayman
+plugins:
+- jekyll-remote-theme
+```
   - Create a file with the path *docs/home.md* and paste the following content in it after editing the web links according to the name you picked for your organization:
     
-      ```
-      ---
-      layout: default
-      title: Docs for the project-repo
-      description: Docs for the project-repo
-      permalink: /
-      ---
-      This is the docs homepage for the repo [project-repo](https://github.com/gh-pages-project/project-repo).
-      ```
+```
+---
+layout: default
+title: Docs for the project-repo
+description: Docs for the project-repo
+permalink: /
+---
+This is the docs homepage for the repo [project-repo](https://github.com/gh-pages-project/project-repo).
+```
 
 Visit the link https://[your organization name].github.io/project-repo and if everything went well you will see the homepage for the  project repo docs. Well done! 
 Before we take a coffee break, let us create a link to the above page: 
 - Exercise: Create a link to the project-repo docs on the homepage of the repo [your organization name].github.io:
   - Go to the repo [your organization name].github.io and add the following line at the bottom of the file pages/home.md (replace gh-pages-project with the name of your organization:
     
-    ```
-    This project is about GitHub pages, visit the [project document]({% link pages/gh_pages_project.md %}) to learn how the project 
-    was implemented.
+```
+This project is about GitHub pages, visit the [project document]({% link pages/gh_pages_project.md %}) to learn how the project 
+was implemented.
 
-    Visit the example repo [example](https://github.com/gh-pages-project/project-repo) with a docs folder as the source of pages [pages for example repo docs](https://gh-pages-project.github.io/project-repo/).
-    ```
+Visit the example repo [example](https://github.com/gh-pages-project/project-repo) with a docs folder as the source of pages [pages for example repo docs](https://gh-pages-project.github.io/project-repo/).
+```
 
 Wait for a minute or so and visit the  page https://[your organization name].github.io/ and click on the link you have just created. 
 Great, let us take a coffee break.
@@ -159,31 +159,31 @@ The html code we need is unique for every repo. We can generate it for any or ev
   - under *Theme*, select a theme
   - under *enable giscus* copy the generated html code, in my case it is:
     
-    ```html
-    <script src="https://giscus.app/client.js"
-        data-repo="gh-pages-project/gh-pages-project.github.io"
-        data-repo-id="R_kgDONOp0jQ"
-        data-category="Announcements"
-        data-category-id="DIC_kwDONOp0jc4CkRnZ"
-        data-mapping="url"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-    </script>
-    ```
+```html
+<script src="https://giscus.app/client.js"
+    data-repo="gh-pages-project/gh-pages-project.github.io"
+    data-repo-id="R_kgDONOp0jQ"
+    data-category="Announcements"
+    data-category-id="DIC_kwDONOp0jc4CkRnZ"
+    data-mapping="url"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async>
+</script>
+```
   - visit the pages repo root folder , create a new file with the path _includes/giscus.liquid and paste the code you have copied in the previous step
   - wrap your code in a div as follows and commit changes:
     
-    ```html
-    <div style="max-width: {{ site.max_width }}; margin: 0 auto;">
-    code generated by giscus app here
-    </div>
-    ```
+```html
+<div style="max-width: {{ site.max_width }}; margin: 0 auto;">
+code generated by giscus app here
+</div>
+```
     
 ### 2.4 Create a page layout in the pages repo
 
@@ -192,14 +192,14 @@ The html code we need is unique for every repo. We can generate it for any or ev
   - paste the following code and commit changes:
 
 ```html
-    ---
-    layout: default
-    ---
-    <h1>{{ page.title }}</h1>
-    {{content}}   
-    {% if page.giscus_comments %}
-      {% include giscus.liquid %}
-    {% endif %}
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+{{content}}   
+{% if page.giscus_comments %}
+{% include giscus.liquid %}
+{% endif %}
 ```
 
 ### 2.5 Create a test page for comments
@@ -208,16 +208,16 @@ The html code we need is unique for every repo. We can generate it for any or ev
   - create a new file with the path pages/test_comments.md
   - paste the following content in it and make changes for author name and date fields and commit changes:
     
-    ```yaml
-    ---
-    layout: page
-    title: A page with comments enabled
-    description: test giscus comments
-    giscus_comments: true
-    ---
-  
-    This is a test page with comments enabled.
-    ```
+```yaml
+---
+layout: page
+title: A page with comments enabled
+description: test giscus comments
+giscus_comments: true
+---
+
+This is a test page with comments enabled.
+```
 
 Let us create link for the test_comments page for easy navigation:
 
@@ -262,46 +262,46 @@ The following exercise will disable the default workflow and enable our custom w
   - create a new file with the path .github/workflows/build_deploy_gh_pages.yml
   - paste the following content in it and commit changes:
     
-    ```yaml
-    name: build_deploy_gh_pages
-    on: 
-      workflow_dispatch
-    
-    jobs:
-      # Build job
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout
-            uses: actions/checkout@v4
-          - name: Setup Pages
-            id: pages
-            uses: actions/configure-pages@v5
-          - name: Build with Jekyll
-            uses: actions/jekyll-build-pages@v1
-            with:
-              source: ./
-              destination: ./_site
-          - name: Upload artifact
-            uses: actions/upload-pages-artifact@v3
-            with:
-              path: ./_site
-      # Deployment job
-      deploy: 
-        permissions:
-          contents: read
-          pages: write
-          id-token: write
-        environment:
-          name: github-pages
-          url: ${{steps.deployment.outputs.page_url}}
-        runs-on: ubuntu-latest
-        needs: build
-        steps:
-          - name: Deploy to GitHub Pages
-            id: deployment
-            uses: actions/deploy-pages@v4
-    ```
+```yaml
+name: build_deploy_gh_pages
+on: 
+  workflow_dispatch
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+  # Deployment job
+  deploy: 
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
     
 ### 3.3 Run the custom workflow
 
@@ -325,74 +325,74 @@ We need to create a new repo that will host the reusable workflow that both of o
   - create a public repo named *workflows* under our organization (follow the usual steps to create a repo under our organization).
   - in the root folder of the *workflows* repo, create a new file with the path ./github/workflows/build_deploy_gh_pages.yml, paste the following code in it and  commit changes:
     
-    ```yaml
-    name: build_deploy_gh_pages reusable workflow
-    on:
-      workflow_call:
-        inputs:
-          build_source:
-            description: source directory for build
-            required: false 
-            type: string
-            default: ''
-          build_destination:
-            description: destination directory for build
-            required: false 
-            type: string
-            default: _site
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - name: checkout file
-            uses: actions/checkout@v4          
-          - name: Setup Pages
-            id: pages
-            uses: actions/configure-pages@v5
-          - name: jekyll-build-pages@v1
-            uses: actions/jekyll-build-pages@v1
-            with:
-              source: ${{inputs.build_source}}
-              destination: ${{inputs.build_destination}}
-          - name: Upload artifact
-            uses: actions/upload-pages-artifact@v3
-            with:
-              path: ${{inputs.build_destination}}
-      deploy_gh_pages:
-        needs: build
-        permissions:
-          contents: read
-          pages: write
-          id-token: write
-        environment:
-          name: github-pages
-          url: ${{steps.deployment.outputs.page_url}}
-        runs-on: ubuntu-latest
-        steps:
-          - name: Deploy to GitHub Pages
-            id: deployment
-            uses: actions/deploy-pages@v4
-    ```
+```yaml
+name: build_deploy_gh_pages reusable workflow
+on:
+  workflow_call:
+    inputs:
+      build_source:
+        description: source directory for build
+        required: false 
+        type: string
+        default: ''
+      build_destination:
+        description: destination directory for build
+        required: false 
+        type: string
+        default: _site
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout file
+        uses: actions/checkout@v4          
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: jekyll-build-pages@v1
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ${{inputs.build_source}}
+          destination: ${{inputs.build_destination}}
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{inputs.build_destination}}
+  deploy_gh_pages:
+    needs: build
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
 
 - Exercise:
   - switch to the repo [your organization name].github.io
   - open the ./github/workflows/build_deploy_gh_pages.yml file to edit and replace the content with the following code and commit changes:
     
-    ```yaml
-    name: build_deploy_gh_pages
-    on:
-      workflow_dispatch 
-    jobs:   
-      job1: 
-        permissions:
-          contents: read
-          pages: write
-          id-token: write
-        name: call the reusable workflow
-        uses: gh-pages-project/workflows/.github/workflows/build_deploy_gh_pages.yml@main
-        with:
-          build_source: './'
-    ```
+```yaml
+name: build_deploy_gh_pages
+on:
+  workflow_dispatch 
+jobs:   
+  job1: 
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    name: call the reusable workflow
+    uses: gh-pages-project/workflows/.github/workflows/build_deploy_gh_pages.yml@main
+    with:
+      build_source: './'
+```
 
 Now let us test our new setup. Click on *Actions* tab and run the updated workflow. Wait for the workflow to finish. If it finishes successfully, go to your pages site and refresh your browser. If all went well you will see your site.
 
