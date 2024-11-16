@@ -83,11 +83,11 @@ The last step above is necessary for enabling pages for a repo, it was not neede
       ```
       ---
       layout: default
-      title: Project Homepage
+      title: Docs for the project-repo
       description: Docs for the project-repo
       permalink: /
       ---
-      This is the docs homepage for the [project-repo](https://github.com/gh-pages-project/project-repo). Also visit the [homepage](https://gh-pages-project.github.io/) for my GitHub profile.
+This is the docs homepage for the repo [project-repo](https://github.com/gh-pages-project/project-repo).
       ```
 
 Visit the link https://[your organization name].github.io/project-repo and if everything went well you will see the homepage for the  project repo docs. Well done! 
@@ -95,7 +95,10 @@ Before we take a coffee break, let us create a link to the above page:
 - Exercise: Create a link to the project-repo docs on the homepage of the repo [your organization name].github.io:
   - Go to the repo [your organization name].github.io and add the following line at the bottom of the file pages/home.md (replace gh-pages-project with the name of your organization:
     ```
-    Visit my [project-repo](https://github.com/gh-pages-project/project-repo) and related [docs](https://gh-pages-project.github.io/project-repo/).
+    This project is about GitHub pages, visit the [project document]({% link pages/gh_pages_project.md %}) to learn how the project 
+    was implemented.
+
+    Visit the example repo [example](https://github.com/gh-pages-project/project-repo) with a docs folder as the source of pages [pages for example repo docs](https://gh-pages-project.github.io/project-repo/).
     ```
 
 Wait for a minute or so and visit the  page https://[your organization name].github.io/ and click on the link you have just created. 
@@ -228,7 +231,7 @@ A page for testing comments is [here](test_comments.md)
 
 Another way to link the page is using the *link* tag:
 ```
-A page for testing comments is [here]({% link pages/test_comments.md %}).
+A page for testing giscus comments functionality is [here]({% link pages/test_comments.md %}).
 ```
 
 Note: The two methods used above for linking a page use different file paths for the same page, *test_comments.md vs pages/test_comments.md". In this introductory project we will not discuss this subject (links and linking in Jekyll)). A tutorial on Jekyll and Liquid syntax is beyond the scope of this project.
