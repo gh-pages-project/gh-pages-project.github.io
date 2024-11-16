@@ -1,4 +1,4 @@
 ```math
-sqrt{3x-1}+(1+x)^2`
+sqrt{3x-1}+(1+x)^2
 ```
-This sentence uses $\` and \`$ delimiters to show math inline:  $`\sqrt{3x-1}+(1+x)^2`$
+show math inline:  $`\sqrt{3x-1}+(1+x)^2`$
