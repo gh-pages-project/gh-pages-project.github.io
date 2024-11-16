@@ -4,12 +4,12 @@ title: GitHub Pages
 description: A basic project on how to create and deploy GitHub pages
 giscus_comments: true
 author: sha
-completion date: 16-11-2024
+date: 16-11-2024
 ---
 
-Documenting our work is very important. If we do not document our work, with the passage of time we will forget the steps and process that helped us achieve our goal. Also, documentation helps showcase your work, collaborate with others, and makes it easier for others to build upon our dreams after we leave. It also helps improve our writing. GitHub has easy to use [service](https://docs.github.com/en/pages) for this purpose. 
+Documenting our work is very important. If we do not document our work, with the passage of time we will forget the steps and process that helped us achieve our goal. Also, documentation helps showcase your work, collaborate with others, and makes it easier for others to build upon our dreams after we leave. It also helps improve our writing. [GitHub pages](https://docs.github.com/en/pages) is an easy to use for this purpose. 
 
-GitHub pages is a static website deployed on GitHub, free of charge, thanks to GitHub. The pages are used for documentation (for everything related to open source projects on GitHub) and GitHub user profiles.  In this project, we are going to learn how to create and deploy multi-repo GitHub pages under a GitHub organization, with [giscus app](https://giscus.app/) for comments. 
+GitHub pages is a static website deployed on GitHub, free of charge, thanks to GitHub. The pages are used for documentation (for everything related to open source projects on GitHub) and GitHub user profiles.  In this project, we are going to learn how to create and deploy multi-repo GitHub pages under a GitHub organization, with comments functionality enabled using [giscus](https://giscus.app/). We will also learn how to setup [GitHub actions and workflows](https://docs.github.com/en/actions) for building and deployming the pages. 
 
 ## 1. Setup GitHub Pages
 
@@ -403,4 +403,79 @@ We need to repeat the above steps for our repo named project-repo with the follo
 
 Great, our workflow setup is done. Happy writing :heart:.
 
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+```geojson
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "ID": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+              [-90,35],
+              [-90,30],
+              [-85,30],
+              [-85,35],
+              [-90,35]
+          ]
+        ]
+      }
+    }
+  ]
+}
+```
+
+```stl
+solid cube_corner
+  facet normal 0.0 -1.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 1.0 0.0 0.0
+      vertex 0.0 0.0 1.0
+    endloop
+  endfacet
+  facet normal 0.0 0.0 -1.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 1.0 0.0
+      vertex 1.0 0.0 0.0
+    endloop
+  endfacet
+  facet normal -1.0 0.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 0.0 1.0
+      vertex 0.0 1.0 0.0
+    endloop
+  endfacet
+  facet normal 0.577 0.577 0.577
+    outer loop
+      vertex 1.0 0.0 0.0
+      vertex 0.0 1.0 0.0
+      vertex 0.0 0.0 1.0
+    endloop
+  endfacet
+endsolid
+```
+
+This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
+
+**The Cauchy-Schwarz Inequality**
+
+```math
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+```
 Acknowledgments: I got a lot of help from [github docs](https://docs.github.com) and [jekyll docs](https://jekyllrb.com/) for writing this document. 
