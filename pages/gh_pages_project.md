@@ -190,12 +190,11 @@ The html code we need is unique for every repo. We can generate it for any or ev
 - Exercise: Visit the root folder of the pages repo:
   - create a new file with the path _layouts/page.liquid
   - paste the following code and commit changes:
-    
-    {% raw %}
+
+    ```    
     ---
     layout: default
     ---
-
     <small>{{ page.date | date: "%-d %B %Y" }}</small>
     <h1>{{ page.title }}</h1>
     <p class="view">by {{ page.author | default: site.author }}</p>    
@@ -207,6 +206,7 @@ The html code we need is unique for every repo. We can generate it for any or ev
       {% include giscus.liquid %}
     {% endif %}
     {% endraw %}
+    ```
 
 ### 2.5 Create a test page for comments
 
