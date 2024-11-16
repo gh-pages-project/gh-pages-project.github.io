@@ -192,10 +192,11 @@ The html code we need is unique for every repo. We can generate it for any or ev
   - paste the following code and commit changes:
     
     ```
+    {% raw %}
     ---
     layout: default
     ---
-    
+
     <small>{{ page.date | date: "%-d %B %Y" }}</small>
     <h1>{{ page.title }}</h1>
     <p class="view">by {{ page.author | default: site.author }}</p>    
@@ -206,6 +207,7 @@ The html code we need is unique for every repo. We can generate it for any or ev
     {% if page.giscus_comments %}
       {% include giscus.liquid %}
     {% endif %}
+    {% endraw %}
     ```
 
 ### 2.5 Create a test page for comments
