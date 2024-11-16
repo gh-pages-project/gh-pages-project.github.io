@@ -3,6 +3,8 @@ layout: page
 title: GitHub Pages
 description: A basic project on how to create and deploy GitHub pages
 giscus_comments: true
+author: sha
+completion date: 16-11-2024
 ---
 
 Documenting our work is very important. If we do not document our work, with the passage of time we will forget the steps and process that helped us achieve our goal. Also, documentation helps showcase your work, collaborate with others, and makes it easier for others to build upon our dreams after we leave. It also helps improve our writing. GitHub has easy to use [service](https://docs.github.com/en/pages) for this purpose. 
@@ -87,7 +89,7 @@ The last step above is necessary for enabling pages for a repo, it was not neede
       description: Docs for the project-repo
       permalink: /
       ---
-This is the docs homepage for the repo [project-repo](https://github.com/gh-pages-project/project-repo).
+      This is the docs homepage for the repo [project-repo](https://github.com/gh-pages-project/project-repo).
       ```
 
 Visit the link https://[your organization name].github.io/project-repo and if everything went well you will see the homepage for the  project repo docs. Well done! 
@@ -182,19 +184,19 @@ The html code we need is unique for every repo. We can generate it for any or ev
 
 - Exercise: Visit the root folder of the pages repo:
   - create a new file with the path _layouts/page.liquid
-  - paste the following code:
+  - paste the following code and commit changes:
     ```
     ---
     layout: default
     ---
-
+    
     <small>{{ page.date | date: "%-d %B %Y" }}</small>
     <h1>{{ page.title }}</h1>
-
+    
     <p class="view">by {{ page.author | default: site.author }}</p>
-
+    
     {{content}}
-
+    
     {% if page.tags %}
       <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
     {% endif %}
@@ -202,9 +204,9 @@ The html code we need is unique for every repo. We can generate it for any or ev
       {% include giscus.liquid %}
     {% endif %}
     ```
-  - commit changes
 
 ### 2.5 Create a test page for comments
+
 - Exercise: Visit the root folder of pages repo:
   - create a new file with the path pages/test_comments.md
   - paste the following content in it and make changes for author name and date fields:
