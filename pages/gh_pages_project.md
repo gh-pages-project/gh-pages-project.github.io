@@ -48,7 +48,7 @@ So far we have been using our README.md file for our homepage. Let us create our
 
 - Exercise: From root folder of your repo ([your organization name].github.io), create a new file with the path pages/home.md, paste the following content in it, and commit changes:
   
-  ```liquid
+  ```jekyll
   ---
   layout: default
   title: GitHub Pages
@@ -76,7 +76,7 @@ The last step above is necessary for enabling pages for a repo, it was not neede
 - Exercise: Create a page in the new repo:
   - To add a theme, create a file with the path docs/_config.yml in the root folder of the repo (named project-repo) and paste the following content in it:
     
-    ```
+    ```yaml
     title: project-repo docs
     description: Docs for the project-repo
     remote_theme: pages-themes/cayman
@@ -85,7 +85,7 @@ The last step above is necessary for enabling pages for a repo, it was not neede
     ```
   - Create a file with the path *docs/home.md* and paste the following content in it after editing the web links according to the name you picked for your organization:
     
-      ```
+      ```markdown
       ---
       layout: default
       title: Docs for the project-repo
@@ -100,7 +100,7 @@ Before we take a coffee break, let us create a link to the above page:
 - Exercise: Create a link to the project-repo docs on the homepage of the repo [your organization name].github.io:
   - Go to the repo [your organization name].github.io and add the following line at the bottom of the file pages/home.md (replace gh-pages-project with the name of your organization:
     
-    ```
+    ```markdown
     This project is about GitHub pages, visit the [project document]({% link pages/gh_pages_project.md %}) to learn how the project 
     was implemented.
 
@@ -159,7 +159,7 @@ The html code we need is unique for every repo. We can generate it for any or ev
   - under *Theme*, select a theme
   - under *enable giscus* copy the generated html code, in my case it is:
     
-    ```
+    ```html
     <script src="https://giscus.app/client.js"
         data-repo="gh-pages-project/gh-pages-project.github.io"
         data-repo-id="R_kgDONOp0jQ"
@@ -190,8 +190,8 @@ The html code we need is unique for every repo. We can generate it for any or ev
 - Exercise: Visit the root folder of the pages repo:
   - create a new file with the path _layouts/page.liquid
   - paste the following code and commit changes:
- 
- ```html
+
+{% highlight liquid %}
     ---
     layout: default
     ---
@@ -205,7 +205,7 @@ The html code we need is unique for every repo. We can generate it for any or ev
     {% if page.giscus_comments %}
       {% include giscus.liquid %}
     {% endif %}
- ```
+ {% endhighlight %}
 
 ### 2.5 Create a test page for comments
 
