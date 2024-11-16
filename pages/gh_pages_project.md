@@ -212,8 +212,6 @@ The html code we need is unique for every repo. We can generate it for any or ev
     ---
     layout: page
     title: A page with comments enabled
-    author: sha
-    date: 14-11-2024
     description: test giscus comments
     giscus_comments: true
     ---
