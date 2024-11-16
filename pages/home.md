@@ -9,3 +9,5 @@ This project is about GitHub pages, visit the [project document]({% link pages/g
 Visit the [example repo](https://github.com/gh-pages-project/project-repo) with a docs folder as the source of the [pages](https://gh-pages-project.github.io/project-repo/).
 
 A page for testing giscus comments functionality is [here]({% link pages/test_comments.md %}).
+
+This site uses [cayman theme](https://github.com/pages-themes/cayman).
