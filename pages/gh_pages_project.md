@@ -85,7 +85,7 @@ The last step above is necessary for enabling pages for a repo, it was not neede
     ```
   - Create a file with the path *docs/home.md* and paste the following content in it after editing the web links according to the name you picked for your organization:
     
-      ```yaml
+      ```
       ---
       layout: default
       title: Docs for the project-repo
@@ -100,7 +100,7 @@ Before we take a coffee break, let us create a link to the above page:
 - Exercise: Create a link to the project-repo docs on the homepage of the repo [your organization name].github.io:
   - Go to the repo [your organization name].github.io and add the following line at the bottom of the file pages/home.md (replace gh-pages-project with the name of your organization:
     
-    ```liquid
+    ```
     This project is about GitHub pages, visit the [project document]({% link pages/gh_pages_project.md %}) to learn how the project 
     was implemented.
 
@@ -191,7 +191,7 @@ The html code we need is unique for every repo. We can generate it for any or ev
   - create a new file with the path _layouts/page.liquid
   - paste the following code and commit changes:
 
-```liquid
+```html
     ---
     layout: default
     ---
@@ -230,7 +230,7 @@ Let us create link for the test_comments page for easy navigation:
 
 Exercise: visit the root folder of the pages repo, edit the file pages/home.md by adding the following content at the bottom of the page:
 
-```liquid
+```
 A page for testing giscus comments functionality is [here]({% link pages/test_comments.md %}).
 ```
 
