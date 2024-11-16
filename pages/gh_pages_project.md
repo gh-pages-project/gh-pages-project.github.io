@@ -192,7 +192,6 @@ The html code we need is unique for every repo. We can generate it for any or ev
   - paste the following code and commit changes:
  
  ```liquid
-    
     ---
     layout: default
     ---
@@ -206,7 +205,6 @@ The html code we need is unique for every repo. We can generate it for any or ev
     {% if page.giscus_comments %}
       {% include giscus.liquid %}
     {% endif %}
-    
  ```
 
 ### 2.5 Create a test page for comments
