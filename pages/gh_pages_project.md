@@ -351,9 +351,9 @@ We need to create a new repo that will host the reusable workflow that both of o
 - Exercise:
   - create a public repo named *workflows* under our organization (follow the usual steps to create a repo under our organization).
   - in the root folder of the *workflows* repo, create a new file with the path ./github/workflows/build_deploy_gh_pages.yml, paste the following code in it and  commit changes:
-   
+
+{% raw %} 
 ```yaml
-{% raw %}
 name: build_deploy_gh_pages reusable workflow
 on:
   workflow_call:
@@ -400,16 +400,15 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-{% endraw %}
 ```
+{% endraw %} 
         
 - Exercise:
   - switch to the repo [your organization name].github.io
   - open the ./github/workflows/build_deploy_gh_pages.yml file to edit and replace the content with the following code and commit changes:
 
-           
+{% raw %}            
 ```yaml
-{% raw %} 
 name: build_deploy_gh_pages
 on:
   workflow_dispatch 
@@ -423,8 +422,8 @@ jobs:
     uses: gh-pages-project/workflows/.github/workflows/build_deploy_gh_pages.yml@main
     with:
       build_source: './'
-{% endraw %} 
 ```
+{% endraw %} 
 
 Now let us test our new setup. Click on *Actions* tab and run the updated workflow. Wait for the workflow to finish. If it finishes successfully, go to your pages site and refresh your browser. If all went well you will see your site.
 
