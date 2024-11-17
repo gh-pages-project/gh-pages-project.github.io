@@ -9,7 +9,7 @@ date: 17-11-2024
 
 Documenting work is very important. If we do not document our work, with the passage of time we forget the steps and process that helped us achieve our goal. Also, documentation helps showcase work, collaborate with others, and makes it easier for others to build upon our dreams after we leave. It also helps improve writing. [GitHub pages](https://docs.github.com/en/pages) is an easy to use service for this purpose. 
 
-GitHub pages is a static website deployed on GitHub, free of charge, thanks to GitHub. The pages are used for documentation (for everything related to open source projects on GitHub) and GitHub user profiles.  In this project, we are going to learn how to create and deploy multi-repo GitHub pages under a GitHub organization, with comments functionality enabled using [giscus](https://giscus.app/). We will also learn how to setup [GitHub actions and workflows](https://docs.github.com/en/actions) for building and deployming the pages. 
+GitHub pages is a static website deployed on GitHub, free of charge, thanks to GitHub. The pages are used for documentation (for everything related to open source projects on GitHub) and GitHub user profiles.  In this project, we are going to learn how to create and deploy multi-repo GitHub pages under a GitHub organization, with comments functionality enabled using [giscus](https://giscus.app/). We will also learn how to setup [GitHub actions and workflows](https://docs.github.com/en/actions) for building and deploying the pages. 
 
 ## 1. Setup GitHub Pages
 
@@ -128,11 +128,11 @@ In the subsections below, you will see some code using html, Liquid, and Jekyll 
 
 ### 2.1 Enable discussions for the pages repo 
 
-Enabling discussions is a requirement to allow comments on our pages. For a demo, We will enable disvusssions only for the pages repo [your organization name].github.io, this will allow us to enable comments in the pages we create in the repo. 
+Enabling discussions is a requirement to allow comments on our pages. For a demo, We will enable discussions only for the pages repo [your organization name].github.io, this will allow us to enable comments in the pages we create in the repo. 
 
 - Exercise: Enable discussions for the pages repo
   - visit you pages repo [your_organization_name]).github.io and click *settings*
-  - under *Features*, select *Discussions* option to enable dicussions.
+  - under *Features*, select *Discussions* option to enable discussions.
 
 Now discussions are enabled, next step is to install [giscus app](https://giscus.app).
 
@@ -261,7 +261,7 @@ Enabling discussions for a repo is a requirement to allow comments on our pages.
 
 - Exercise: Enable discussions for the organization
   - under your organization, create a public repo named *.discussions* to host discussions 
-  - visit your organiztion page (https://github.com/[your_organization_name]) and click *settings*
+  - visit your organization page (https://github.com/[your_organization_name]) and click *settings*
   - near middle of the left side menu, click *Discussions*
   - select *Enable discussions for this organization*, select *[your organization name].discussions* for the repo to host discussions, and click *save*
 
@@ -275,7 +275,7 @@ The default workflow mentioned above is nice but it is not in our hands. Let us 
 
 ### 3.1 Enable custom workflows for a repo
 The following exercise will disable the default workflow and enable our custom workflow to build and deploy pages.
-- Exercise: Enable custom worfkows for the repo pages
+- Exercise: Enable custom workflows for the repo pages
   - click settings of the repo [your organization name].github.io
   - click *Pages* on the left side menu
   - under *Build and deployment*, select *Github Actions*  under *source*
