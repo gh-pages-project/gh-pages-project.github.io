@@ -378,7 +378,7 @@ jobs:
   - switch to the repo [your organization name].github.io
   - open the ./github/workflows/build_deploy_gh_pages.yml file to edit and replace the content with the following code and commit changes:
     
-```yaml
+```
 name: build_deploy_gh_pages
 on:
   workflow_dispatch 
