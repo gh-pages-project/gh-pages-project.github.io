@@ -180,7 +180,7 @@ The html code we need is unique for every repo. We can generate it for any or ev
     data-strict="0"
     data-reactions-enabled="1"
     data-emit-metadata="0"
-    data-input-position="bottom"
+    data-input-position="top"
     data-theme="preferred_color_scheme"
     data-lang="en"
     crossorigin="anonymous"
