@@ -325,7 +325,7 @@ We need to create a new repo that will host the reusable workflow that both of o
   - create a public repo named *workflows* under our organization (follow the usual steps to create a repo under our organization).
   - in the root folder of the *workflows* repo, create a new file with the path ./github/workflows/build_deploy_gh_pages.yml, paste the following code in it and  commit changes:
     
-```yaml
+{% highlight yaml %}
 name: build_deploy_gh_pages reusable workflow
 on:
   workflow_call:
@@ -372,7 +372,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-```
+{% endhighlight %}
 
 - Exercise:
   - switch to the repo [your organization name].github.io
