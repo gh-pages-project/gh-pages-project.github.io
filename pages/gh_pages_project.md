@@ -434,7 +434,8 @@ We need to repeat the above steps for our repo named project-repo with the follo
 This topic is a bit advanced for this project, a separate project is needed for this topic. Just a quick rundown:
 
 ### 4.1 Images
-Include a local image:
+
+Include a local image ([image source](https://unsplash.com/photos/sun-light-passing-through-green-leafed-tree-EwKXn5CapA4)):
 
 ```
 ![image]({% link data/img3783small.jpeg %})
@@ -444,24 +445,14 @@ result:
 
 ![image]({% link data/img3783small.jpeg %})
 
-Include an image through a weblink:
-
-```
-![image source](https://unsplash.com/photos/sun-light-passing-through-green-leafed-tree-EwKXn5CapA4)
-```
-
-which results in:
-
-![image source](https://unsplash.com/photos/sun-light-passing-through-green-leafed-tree-EwKXn5CapA4)
-
 ### 4.2 Code blocks
 
 Code blocks are enclosed inside triple backticks with the coding language name appended as below:
   
 ```
-```html
-<p> html code example </p>
-```
+        ```html
+        <p> html code example </p>
+        ```
 ```
 
 the above code renders as:
