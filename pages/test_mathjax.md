@@ -7,14 +7,11 @@ date: 18-11-2024
 ---
 
 
-Math inline:  $\sqrt{3x-1}+(1+x)^2$
+We can include inline math: $x e^{x+1}$,
 
-Math block:
+and a math block:
 
-$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
-
-
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+$$E^2 = c^2 \mathbf{p}\cdot \boldsymbol{p} + \left(m_0 c^2\right)^2$$
 
 <!-- MathJax -->
 <script>
