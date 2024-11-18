@@ -3,7 +3,7 @@ layout: page
 title: GitHub Pages
 description: A basic project on how to create and deploy GitHub pages
 giscus_comments: true
-author: sha
+author: site.author
 date: 17-11-2024
 ---
 
@@ -428,6 +428,52 @@ jobs:
 Now let us test our new setup. Click on *Actions* tab and run the updated workflow. Wait for the workflow to finish. If it finishes successfully, go to your pages site and refresh your browser. If all went well you will see your site.
 
 We need to repeat the above steps for our repo named project-repo with the following change in the workflow code: Change the value of build_source from './' to './docs'. Also test the workflow.
+
+##4. Including Code, Images, Diagrams, and Math  
+
+This topic is a bit advanced for this project, a separate project is needed for this topic. Just a quick rundown:
+
+###4.1 Images
+Include a local image:
+
+```
+[image]({% link data/img3783small.jpeg %})
+```
+
+result:
+
+[image]({% link data/img3783small.jpeg %})
+
+```
+
+Include an image through a weblink:
+
+```
+![image source](https://unsplash.com/photos/sun-light-passing-through-green-leafed-tree-EwKXn5CapA4)
+```
+
+which results in:
+
+![image source](https://unsplash.com/photos/sun-light-passing-through-green-leafed-tree-EwKXn5CapA4)
+
+###4.2 Code blocks
+Code blocks are enclosed inside triple backticks with the coding language name appended as below:
+  
+```
+```html
+<p> html code example </p>
+```
+```
+
+the above code renders as:
+
+```html
+<p> html code example </p>
+```
+
+###4.3 Diagrams and math
+To include diagrams, we use [Mermaid](https://mermaid.js.org/), and  [MathJax](https://www.mathjax.org/) for math equations. 
+See test pages ([test_mermaid]({% link pages/test_mermiad.md %}) and [test_mathjax]({% link pages/test_mathjax.md %})). See the source code in the *_includes* and *pages* folders of the [repo](https://github.com/gh-pages-project/gh-pages-project.github.io).
 
 Great, our workflow setup is done. Happy writing :heart:.
 
