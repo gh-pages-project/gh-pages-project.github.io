@@ -1,13 +1,12 @@
 ---
 layout: page
 title: Test Mermaid and MathJax
-description: test giscus comments
-giscus_comments: true
+description: test how to use MathJax and Mermaid
 author: author_name
 date: 18-11-2024
 ---
 
-Here is a simple flow chart:
+Flow chart:
 
 <pre class="mermaid">
 graph TD;
@@ -18,8 +17,10 @@ graph TD;
 </pre>	
 
 
-This sentence uses $\` and \`$ delimiters to show math inline:  $`\sqrt{3x-1}+(1+x)^2`$
-**The Cauchy-Schwarz Inequality**
+Math inline:  $`\sqrt{3x-1}+(1+x)^2`$
+
+Math block:
+
 $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 
 <script type="module">
