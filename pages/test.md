@@ -7,6 +7,7 @@ author: author_name
 date: 17-11-2024
 ---
 
+<pre class="mermaid">
 Here is a simple flow chart:
 
 ```mermaid
@@ -16,6 +17,7 @@ graph TD;
     B-->D;
     C-->D;
 ```
+</pre>	
 
 <script type="module">
 	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
