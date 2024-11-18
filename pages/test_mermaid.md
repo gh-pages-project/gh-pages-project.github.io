@@ -3,7 +3,7 @@ layout: page
 title: Including diagrams
 description: Include diagrams using Mermaid
 use_mermaid: true
-author: site.author
+author: {{site.author}}
 date: 18-11-2024
 ---
 
