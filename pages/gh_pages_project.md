@@ -473,7 +473,7 @@ the above code renders as:
 
 ###4.3 Diagrams and math
 To include diagrams, we use [Mermaid](https://mermaid.js.org/), and  [MathJax](https://www.mathjax.org/) for math equations. 
-See test pages ([test_mermaid]({% link pages/test_mermiad.md %}) and [test_mathjax]({% link pages/test_mathjax.md %})). See the source code in the *_includes* and *pages* folders of the [repo](https://github.com/gh-pages-project/gh-pages-project.github.io).
+See test pages ([test_mermaid]({% link pages/test_mermaid.md %}) and [test_mathjax]({% link pages/test_mathjax.md %})). See the source code in the *_includes* and *pages* folders of the [repo](https://github.com/gh-pages-project/gh-pages-project.github.io).
 
 Great, our workflow setup is done. Happy writing :heart:.
 
