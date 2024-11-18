@@ -1,25 +1,22 @@
 ---
 layout: page
-title: Test Mermaid
-description: test how to use Mermaid
+title: Including diagrams
+description: Include diagrams using Mermaid
+use_mermaid: true
 author: author_name
 date: 18-11-2024
 ---
 
+Uses [Mermaid](https://mermaid.js.org/)
 Flow chart:
 
 <pre class="mermaid">
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+graph TD
+    A[T1] --> B(T2)
+    B --> C{T3}
+    C --> D[T4]
+    C --> E[T5]
+    E --> B
+    D --> F[T6]
+    F --> B
 </pre>	
-
-<script type="module">
-	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-	mermaid.initialize({
-		startOnLoad: true,
-		theme: 'dark'
-	});
-</script>
