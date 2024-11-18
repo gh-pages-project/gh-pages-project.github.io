@@ -141,7 +141,7 @@ Now discussions are enabled, next step is to install [giscus app](https://giscus
 We are going to use giscus app (it is free and open source) as a backend for the comments functionality. We will install the app at the organization level so that we can use it for multiple repos if the need arises.
 
 - Exercise: Install [giscus app](https://giscus.app):
-  - visit your organization page (https://github.com/[your organization name])
+  - visit your organization page (https://github.com/[your_organization_name])
   - click *settings*
   - near the bottom of side menu, click *GitHub Apps*
   - click *GitHub Marketplace*
