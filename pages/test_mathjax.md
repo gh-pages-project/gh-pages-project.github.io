@@ -3,7 +3,7 @@ layout: page
 title: Including math symbols and equations
 description: Include math using MathJax
 use_mathjax: true
-author: sha
+author: site.author
 date: 18-11-2024
 ---
 
