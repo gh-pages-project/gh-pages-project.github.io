@@ -10,4 +10,6 @@ Visit the [example repo](https://github.com/gh-pages-project/project-repo) with 
 
 A page for testing giscus comments functionality is [here]({% link pages/test_comments.md %}).
 
+Test pages ([test_mermaid]({% link pages/test_mermaid.md %}) and [test_mathjax]({% link pages/test_mathjax.md %})).
+
 This site uses [cayman theme](https://github.com/pages-themes/cayman).
