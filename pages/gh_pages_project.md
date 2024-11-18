@@ -3,8 +3,8 @@ layout: page
 title: GitHub Pages
 description: A basic project on how to create and deploy GitHub pages
 giscus_comments: true
-author: site.author
-date: 17-11-2024
+author: {{site.author}}
+date: 18-11-2024
 ---
 
 Documenting work is very important. If we do not document our work, with the passage of time we forget the steps and process that helped us achieve our goal. Also, documentation helps showcase work, collaborate with others, and makes it easier for others to build upon our dreams after we leave. It also helps improve writing. [GitHub pages](https://docs.github.com/en/pages) is an easy to use service for this purpose. 
@@ -429,22 +429,20 @@ Now let us test our new setup. Click on *Actions* tab and run the updated workfl
 
 We need to repeat the above steps for our repo named project-repo with the following change in the workflow code: Change the value of build_source from './' to './docs'. Also test the workflow.
 
-##4. Including Code, Images, Diagrams, and Math  
+## 4. Including Code, Images, Diagrams, and Math  
 
 This topic is a bit advanced for this project, a separate project is needed for this topic. Just a quick rundown:
 
-###4.1 Images
+### 4.1 Images
 Include a local image:
 
 ```
-[image]({% link data/img3783small.jpeg %})
+![image]({% link data/img3783small.jpeg %})
 ```
 
 result:
 
-[image]({% link data/img3783small.jpeg %})
-
-```
+![image]({% link data/img3783small.jpeg %})
 
 Include an image through a weblink:
 
@@ -456,7 +454,8 @@ which results in:
 
 ![image source](https://unsplash.com/photos/sun-light-passing-through-green-leafed-tree-EwKXn5CapA4)
 
-###4.2 Code blocks
+### 4.2 Code blocks
+
 Code blocks are enclosed inside triple backticks with the coding language name appended as below:
   
 ```
@@ -471,7 +470,8 @@ the above code renders as:
 <p> html code example </p>
 ```
 
-###4.3 Diagrams and math
+### 4.3 Diagrams and math
+
 To include diagrams, we use [Mermaid](https://mermaid.js.org/), and  [MathJax](https://www.mathjax.org/) for math equations. 
 See test pages ([test_mermaid]({% link pages/test_mermaid.md %}) and [test_mathjax]({% link pages/test_mathjax.md %})). See the source code in the *_includes* and *pages* folders of the [repo](https://github.com/gh-pages-project/gh-pages-project.github.io).
 
