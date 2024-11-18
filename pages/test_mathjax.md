@@ -11,7 +11,7 @@ We can include inline math: $x e^{x+1}$,
 
 and a math block:
 
-$$E^2 = c^2 \mathbf{p}\cdot \boldsymbol{p} + \left(m_0 c^2\right)^2$$
+$$E^2 = c^2 \mathbf{p}\cdot \mathbf{p} + \left(m_0 c^2\right)^2$$
 
 <!-- MathJax -->
 <script>
