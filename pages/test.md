@@ -7,16 +7,14 @@ author: author_name
 date: 17-11-2024
 ---
 
-<pre class="mermaid">
 Here is a simple flow chart:
 
-```mermaid
+<pre class="mermaid">
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-```
 </pre>	
 
 <script type="module">
