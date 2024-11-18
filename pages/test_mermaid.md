@@ -22,3 +22,4 @@ graph TD;
 		startOnLoad: true,
 		theme: 'dark'
 	});
+</script>
